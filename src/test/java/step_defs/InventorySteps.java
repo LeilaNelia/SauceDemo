@@ -31,7 +31,7 @@ public class InventorySteps {
     @Then("user opens the menu")
     public void userOpensTheMenu() {
         inventoryPage.openMenu();
-        Assert.assertTrue(inventoryPage.menuItems()==4);
+        Assert.assertTrue(inventoryPage.menuItems() == 4);
     }
 
     @And("user navigates to {string}")
@@ -41,7 +41,7 @@ public class InventorySteps {
 
     @Then("all the products should be available")
     public void allTheProductsShouldBeAvailable() {
-        Assert.assertTrue(inventoryPage.checkProducts()==6);
+        Assert.assertTrue(inventoryPage.checkProducts() == 6);
     }
 
     @And("sort by {string}")
@@ -54,74 +54,6 @@ public class InventorySteps {
     public void theFirstListedProductShouldBe(String productName) {
         Assert.assertTrue(inventoryPage.checkFirstproduct().equals(productName));
     }
-
-    @And("user should be able to add a product to the cart")
-    public void userShouldBeAbleToAddAProductToTheCart(){
-        inventoryPage.addAProductToCart();
-
-    }
-
-
-    @Then("user should see the remove button")
-    public void userShouldSeeTheRemoveButton() {
-        Assert.assertTrue(inventoryPage.removeButton());
-    }
-
-
-    @Then("user should see the checkout button")
-    public void userShouldSeeTheCheckoutButton() {
-        Assert.assertTrue(inventoryPage.checkOutButton());
-    }
-
-    @And("user navigates to the {string}")
-    public void userNavigatesToThe(String cart) {
-        inventoryPage.navigateToCart();
-    }
-
-    @And("user should click on the checkout button")
-    public void userShouldClickOnTheCheckoutButton() {
-        inventoryPage.checkOut();
-    }
-
-    @Then("user should see the checkout information page")
-    public void userShouldSeeTheCheckoutInformationPage() {
-        Assert.assertTrue(inventoryPage.checkOutInformationPage());
-    }
-
-    @And("user Enter {string}, {string},{string}")
-    public void userEnter(String name, String surname, String code) {
-        inventoryPage.firstName(name);
-        inventoryPage.lastName(surname);
-        inventoryPage.zipCode(code);
-
-    }
-
-    @Then("user should click on the continue button")
-    public void userShouldClickOnTheContinueButton() {
-        inventoryPage.continueButton();
-    }
-
-    @Then("user should see the checkout overview")
-    public void userShouldSeeTheCheckoutOverview() {
-        Assert.assertTrue(inventoryPage.checkoutOverview());
-    }
-
-    @And("user clicks on the  finish button")
-    public void userClicksOnTheFinishButton() {
-        inventoryPage.finishButton();
-    }
-
-    @Then("user should see the thank you message")
-    public void userShouldSeeTheThankYouMessage() {
-        Assert.assertTrue(inventoryPage.thankYouMsg());
-
-    }
-
-    @And("user clicks on the continue shopping button")
-    public void userClicksOnTheContinueShoppingButton() {
-        inventoryPage.continueShopping();
-    }
 }
-
 
 

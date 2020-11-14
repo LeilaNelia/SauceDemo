@@ -18,24 +18,6 @@ Feature: Test Inventory page
     And the first listed product should be "Sauce Labs Fleece Jacket"
 
 
-  Scenario: test Cart
-    And user should be able to add a product to the cart
-    Then user should see the remove button
-    And user navigates to the "Cart"
-    Then user should see the checkout button
-    And user clicks on the continue shopping button
-    Then user should land on the Inventory page
-
-  Scenario: test Checkout
-    Given user navigates to the "Cart"
-    And user should click on the checkout button
-    Then user should see the checkout information page
-    And user Enter "leila", "delil","60171"
-    And user should click on the continue button
-    Then user should see the checkout overview
-    And user clicks on the  finish button
-    Then user should see the thank you message
-
   Scenario: test the logout
     Given user should land on the Inventory page
     And user opens the menu
