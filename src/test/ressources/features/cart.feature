@@ -11,3 +11,4 @@ And user navigates to the "Cart"
 Then user should see the checkout button
 And user clicks on the continue shopping button
 Then user should land on the Inventory page
+just checking
