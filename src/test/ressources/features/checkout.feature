@@ -14,4 +14,4 @@ Feature: Test Inventory page
     Then user should see the checkout overview
     And user clicks on the  finish button
     Then user should see the thank you message
-    testing
+    test
