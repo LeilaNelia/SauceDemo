@@ -25,13 +25,6 @@ public class InventoryPage {
         driver.findElement(By.xpath("//button[text()='Open Menu']")).click();
     }
 
-    public boolean checkMenuIsVisible() {
-
-        return driver.findElement(By.xpath("//button[text()='Open Menu']")).isDisplayed();
-
-
-    }
-
     public int menuItems() {
         List<WebElement> items = driver.findElements(By.xpath("//nav/a"));
         return items.size();

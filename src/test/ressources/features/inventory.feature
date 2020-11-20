@@ -6,7 +6,6 @@ Feature: Test Inventory page
     Then user should land on the Inventory page
 
   Scenario: Test the navigation menu
-    #And the navigation menu should be visible
     Then user opens the menu
     And user navigates to "All Items"
     Then all the products should be available
@@ -18,8 +17,3 @@ Feature: Test Inventory page
     And the first listed product should be "Sauce Labs Fleece Jacket"
 
 
-  Scenario: test the logout
-    Given user should land on the Inventory page
-    And user opens the menu
-    And user navigates to "Logout"
-    Then user is on the sauceDemo LoginPage

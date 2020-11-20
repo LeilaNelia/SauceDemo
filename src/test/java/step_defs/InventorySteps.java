@@ -18,15 +18,7 @@ public class InventorySteps {
 
     }
 
-    @And("the navigation menu should be visible")
-    public void theNavigationMenuShouldBeVisible() {
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        Assert.assertTrue(inventoryPage.checkMenuIsVisible());
-    }
+
 
     @Then("user opens the menu")
     public void userOpensTheMenu() {
